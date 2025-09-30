@@ -234,7 +234,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Learning-based methods, such as imitation learning (IL) and reinforcement learning (RL), can produce excel control policies over challenging agile robot tasks, such as sports robot. However, no existing work has harmonized learning-based policy with model-based methods to reduce training complexity and ensure the safety and stability for agile badminton robot control. In this paper, we introduce Hamlet, a novel hybrid control system for agile badminton robots. Specifically, we propose a model-based strategy for chassis locomotion which provides a base for arm policy. We introduce a physics-informed “IL+RL” training framework for learning-based arm policy. In this train framework, a model-based strategy with privileged information is used to guide arm policy training during both IL and RL phases. In addition, we train the critic model during IL phase to alleviate the performance drop issue when transitioning from IL to RL. We present results on our self-engineered badminton robot, achieving 94.5% success rate against the serving machine and 90.7% success rate against human players. Our system can be easily generalized to other agile mobile manipulation tasks e.g., agile catching, table tennis.           </p>
+          We propose a novel framework for table tennis robots, aiming at simple and rapid deployment 
+          while enhancing the player’s enjoyment. The recursively nested hierarchical structure 
+          is introduced that fully separates high-level decision-making from low-level execution, 
+          eliminating the need to train multiple workers at the execution layer. The multi-objective 
+          problem (beyond focusing solely on landing accuracy) is also studied by introducing a 
+          tolerance-based weight modulation mechanism for the first time, which can balance the landing 
+          accuracy with other objectives and adjust the playing strategy to meet diverse goals. On the 
+          basis of the above, competitive and cooperative play styles are explicitly defined and trained. 
+          Notably, the robot achieved up to 18 consecutive rallies with human player under cooperative mode, 
+          which, to the best of our knowledge, is the longest rally attained with a fixed-base collaborative 
+          robot arm. We provide detailed training process and release both the training environment and 
+          simulation code to accelerate future research on table tennis robots and other sports robotics.           </p>
         </div>
       </div>
     </div>  
@@ -257,11 +268,18 @@
         </figure>
         
         <!-- 文字描述部分 -->
-        <div class="content has-text-left" style="margin-top: 1.5rem;">
+        <div class="content has-text-justified" style="margin-top: 1.5rem;">
           <p>
-            We first detect and predict the incoming shuttlecock's trajectory, then drive the chassis with a model‑based PD controller to a reachable base position. 
-            The predicted trajectory is rigidly transformed—translated by that base position and rotated according to the chassis orientation—into the local arm coordinate frame. 
-            Finally, a learning‑based policy uses the transformed trajectory to generate precise end‑effector velocity commands for accurate hitting.
+            The overall structure of the proposed novel decision-making and training framework. 
+            The hierarchy consists of three layers from top to bottom: Boss, Manager, and Worker, 
+            each with its own Actor, Critic and the environment. The Boss makes the highest-level 
+            decision by selecting the target landing position based only on the ball state (i.e., 
+            all decisions in the system start from the ball state). The Manager then determines a 
+            weight vector for multiple objectives (landing accuracy, net clearance, and return 
+            velocity) trade-off. Finally, the Worker generates the executable action to realize the 
+            decisions made by Boss and Manager. This hierarchically structured decision-making 
+            system exhibits a recursively nested architecture from top to bottom, that the input 
+            and output is combined as the input of next level.
           </p>
         </div>
       </div>
