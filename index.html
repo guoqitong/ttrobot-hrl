@@ -58,16 +58,16 @@
               <span class="author-block">
               <!-- <a href="https://guoqitong.netlify.app/" target="_blank">Qitong Guo</a><sup>1</sup>,</span> -->
               <a>Qitong Guo</a><sup>1</sup>,</span>
-              
+
               <span class="author-block">
               <a>Xiaohang Shi</a><sup>1</sup>,</span>
 
               <span class="author-block">
               <a>Ruoyu Jia</a><sup>1</sup>,</span>
-              
+
               <span class="author-block">
               <a>Chunxin Yang</a><sup>1</sup>,</span>
-                
+
               <span class="author-block">
               <a>Kenichi Murakami</a><sup>2</sup>,</span>
 
@@ -81,11 +81,11 @@
               <span class="author-block"><sup>3</sup>Interfaculty Initiative in Information Studies, The University of Tokyo, Tokyo, Japan</span>
             </div>
 
-            <!-- <div class="column has-text-centered" style="margin: 1rem 0;">
+            <div class="column has-text-centered" style="margin: 1rem 0;">
               <span class="is-size-3 has-text-weight-semibold">
                 <b>IEEE RAL</b>
               </span>
-            </div> -->
+            </div>
             
             <br>
             <div class="column has-text-centered">
@@ -223,6 +223,17 @@
       </div>
     </div>
 
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <center><h2 class="title is-4">Robot vs. Robot</h2></center>
+          <video controls loop playsinline width="100%" onloadedmetadata="this.volume=0.5">
+            <source src="static/videos/robot_vs_robot.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -235,18 +246,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          We propose a novel framework for table tennis robots, aiming at simple and rapid deployment 
-          while enhancing the player’s enjoyment. The recursively nested hierarchical structure 
-          is introduced that fully separates high-level decision-making from low-level execution, 
-          eliminating the need to train multiple workers at the execution layer. The multi-objective 
-          problem (beyond focusing solely on landing accuracy) is also studied by introducing a 
-          tolerance-based weight modulation mechanism for the first time, which can balance the landing 
-          accuracy with other objectives and adjust the playing strategy to meet diverse goals. On the 
-          basis of the above, competitive and cooperative play styles are explicitly defined and trained. 
-          Notably, the robot achieved up to 18 consecutive rallies with human player under cooperative mode, 
-          which, to the best of our knowledge, is the longest rally attained with a fixed-base collaborative 
-          robot arm. We provide detailed training process and release both the training environment and 
-          simulation code to accelerate future research on table tennis robots and other sports robotics.           </p>
+          Although many impressive advances have been reported in table tennis robots field using the reinforcement learning method, challenges related to policy complexity and adaptability continue to hinder large-scale deployment and practical application. In this work, building upon extensive prior studies, we propose several techniques and integrate them into a unified framework that reduces the difficulty of training and deployment while enhancing the human player enjoyment. Specifically, a recursively nested design is introduced in the hierarchical decision-making system, which fully separates high-level decision-making from low-level execution, eliminating the need to train multiple workers at the execution layer. The multi-objective problem is also studied by introducing a tolerance-based weight modulation mechanism, which can balance the landing accuracy with other objectives and adjust the playing strategy to meet diverse goals. Comprehensive experiments demonstrate the effectiveness of the proposed framework and techniques. Notably, the robot achieved up to 18 consecutive rallies with human player, which, to the best of our knowledge, is the longest rally attained with a fixed-base collaborative robot arm. The proposed methods can be readily extended to other racket-sport robots or similar tasks.           </p>
         </div>
       </div>
     </div>  
